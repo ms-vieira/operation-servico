@@ -6,7 +6,7 @@ import br.com.operacao.usecase.model.Operation
 import org.springframework.stereotype.Component
 
 @Component
-class CreateOperationClient(val repository: OperationRepository) {
+class CreateOperationClient(private val repository: OperationRepository) {
 
     fun create(operation: Operation) =
         repository.save(

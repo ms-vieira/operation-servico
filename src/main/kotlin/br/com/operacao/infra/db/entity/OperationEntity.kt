@@ -1,15 +1,15 @@
 package br.com.operacao.infra.db.entity
 
-import javax.persistence.*
+import jakarta.persistence.*
 
 
 @Entity
-@Table(name = "operations")
+@Table(name = "operation")
 class OperationEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long? = null,
-    var action: String?,
-    var clientId: String?,
-    var datProcess: String?
+    var id: Long = 0L,
+    var action: String = "",
+    var clientId: String = "",
+    var datProcess: String = ""
 )
