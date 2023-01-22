@@ -26,8 +26,8 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     //Postgresql
-    //runtimeOnly("org.postgresql:postgresql:42.5.1")
-    runtimeOnly("com.h2database:h2")
+    runtimeOnly("org.postgresql:postgresql:42.5.1")
+    //   runtimeOnly("com.h2database:h2")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

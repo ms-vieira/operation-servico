@@ -21,7 +21,6 @@ class OperationResource(
         return ResponseEntity(HttpStatus.CREATED)
     }
 
-
     @GetMapping("/{clientId}")
     fun searchClient(@PathVariable clientId: String) = searchOperationClient.search(clientId)
 
