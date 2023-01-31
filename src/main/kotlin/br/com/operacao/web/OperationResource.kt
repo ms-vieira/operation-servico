@@ -4,6 +4,7 @@ import br.com.operacao.usecase.CreateOperationClient
 import br.com.operacao.usecase.SearchOperationClient
 import br.com.operacao.usecase.model.Operation
 import br.com.operacao.web.request.OperationRequest
+import br.com.operacao.web.response.OperationsResponse
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -22,6 +23,8 @@ class OperationResource(
     }
 
     @GetMapping("/{clientId}")
-    fun searchClient(@PathVariable clientId: String) = searchOperationClient.search(clientId)
+    fun searchClient(@PathVariable clientId: String): ResponseEntity<List<OperationsResponse>> {
+        return ResponseEntity<List<OperationsResponse>>(searchOperationClient.search(clientId), HttpStatus.OK)
+    }
 
 }
